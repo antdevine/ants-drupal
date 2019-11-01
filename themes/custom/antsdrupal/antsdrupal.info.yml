@@ -1,0 +1,5 @@
+name: Ants Drupal
+type: theme
+description: Ants Drupal theme
+core: 8.x
+base theme: classy

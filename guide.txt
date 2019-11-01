@@ -1,0 +1,45 @@
+**Turn on debugging
+sites > default
+copy default.services.yml and rename to services.yml
+debug: true
+auto_reload: true
+cache: false
+More debugging notes here: https://www.drupal.org/docs/8/theming/twig/debugging-twig-templates
+
+
+**Create theme
+in themes folder create a custom folder
+create a folder for your theme in custom folder
+in your theme folder create a file called: YOURTHEMENAME.info.yml
+In the yml file add in the following:
+name: Ants Drupal
+type: theme
+description: Ants Drupal theme
+core: 8.x
+base theme: classy
+
+More notes on the theme file here: https://www.drupal.org/docs/8/theming-drupal-8/defining-a-theme-with-an-infoyml-file
+
+**Fall back files
+Once debugging is on you can see what files are the core files and copy the file into your theme and then rename them to the ones suggested in the console
+first file to move are html.html.twig
+
+**Create a homepage
+Content > Add content > Basic page
+Give it a title and body copy
+Click provide menu link and set menu title to Home 
+Click URL Alias and give it /home
+click save
+**To make that page the homepage
+Configuration > Basic site settings
+In Front page add in the URL /home and save
+Clear the cache and that page should be homepage
+
+**Change site logo
+Apperance > Settings > YOURTHEMENAME
+Logo Image uncheck the use logo supplied by theme
+Upload your own and clear cache.
+
+**Remove default bloks on new drupal install
+Structure > Block layout > YOURTHEMENAME
+Disable/remove/drag whereever you want
